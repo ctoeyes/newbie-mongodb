@@ -21,13 +21,13 @@ public class WTOperationImpl implements WTOperationInterface {
     @Override
     public void retrieve(Integer d) {
         Query query = new Query(Criteria.where("D").is(d));
-        mongoTemplate.findOne(query, WTObj.class);
+        mongoTemplate.find(query, WTObj.class);
     }
 
     @Override
     public void retrieveByIndex(Integer b) {
         Query query = new Query(Criteria.where("_id").is(b));
-        mongoTemplate.findOne(query, WTObj.class);
+        mongoTemplate.find(query, WTObj.class);
     }
 
     @Override
